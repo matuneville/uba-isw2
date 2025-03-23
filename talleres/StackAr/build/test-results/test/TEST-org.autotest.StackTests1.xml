@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.autotest.StackTests1" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-23T16:28:21" hostname="neville-acer" time="0.085">
+<testsuite name="org.autotest.StackTests1" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-23T20:34:57" hostname="neville-acer" time="0.058">
   <properties/>
-  <testcase name="run()" classname="org.autotest.StackTests1" time="0.085"/>
+  <testcase name="run()" classname="org.autotest.StackTests1" time="0.058"/>
   <system-out><![CDATA[-> Corriendo tests de StackTests1 para la clase: StackAr (Stack original)
 -> Corriendo tests de StackTests1 para la clase: StackArMutated9150 (TrueConditionalsMutator: Se reemplazó la condición 'i > 0' por true en la línea 91.)
 -> Corriendo tests de StackTests1 para la clase: StackArMutated5908 (ConditionalsBoundaryMutator: Se reemplazó < por <= en la línea 18.)
@@ -177,6 +177,6 @@
     - StackArMutated5908 (ConditionalsBoundaryMutator: Se reemplazó < por <= en la línea 18.)
 -> Mutation score: 25%
 ]]></system-out>
-  <system-err><![CDATA[[Test worker] INFO org.reflections.Reflections - Reflections took 25 ms to scan 1 urls, producing 1 keys and 75 values
+  <system-err><![CDATA[[Test worker] INFO org.reflections.Reflections - Reflections took 17 ms to scan 1 urls, producing 1 keys and 75 values
 ]]></system-err>
 </testsuite>

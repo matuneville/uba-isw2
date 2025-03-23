@@ -45,17 +45,20 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 ## Ejercicio 3: Mejora del test suite
 
 1. ¿Cuál es el mutation score logrado para los tests de StackTests3?
-   - Respuesta: 49%
+   - Respuesta: 88%
 
 2. ¿Cuántos mutantes vivos y muertos encontraron?
-   - Mutantes vivos: 38
-   - Mutantes muertos: 37
+   - Mutantes vivos: 9
+   - Mutantes muertos: 66
 
 3. Comente cuáles son todos los mutantes vivos que quedaron y por qué son equivalentes al programa original (si no lo fueran, todavía es posible mejorar el mutation score).
    - Respuesta:
-
+     - `StackArMutated746 (FalseConditionalsMutator: Se reemplazó la condición 'isEmpty()' por false en la línea 45.)`. No se puede matar este mutante ya que luego realiza la validación nuevamente en `top()`, haciendo que lance la excepción nuevamente.
+    
 4. ¿Cuál es el instruction coverage promedio que lograron para las clases mutadas?
-   - Respuesta:
+   - Respuesta: 64%
 
 5. ¿Cuál es el peor instruction coverage que lograron para una clase mutada? ¿Por qué creen que sucede esto?
-   - Respuesta:
+   - Respuesta: La que cambia el tamaño default de 10 a -1. Como el constructor no permite instanciar un stack que tiene tamaño negativo y arroja excepción, no puede cubrir todo el resto de lineas.
+
+   
