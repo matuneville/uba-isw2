@@ -25,9 +25,11 @@ public class ZeroConstantMutator extends MutationOperator {
                 "int"
         );
 
-        if (!targetTypes.contains(type)) {
+        if (!targetTypes.contains(type))
             return false;
-        }
+
+        if (op.toString().equals("0"))
+            return false;
 
         return true;
     }

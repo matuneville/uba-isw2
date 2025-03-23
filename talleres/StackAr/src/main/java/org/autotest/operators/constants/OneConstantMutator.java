@@ -15,20 +15,20 @@ import java.util.List;
 public class OneConstantMutator extends MutationOperator {
     @Override
     public boolean isToBeProcessed(CtElement candidate) {
-        if (!(candidate instanceof CtLiteral)) {
+        if (!(candidate instanceof CtLiteral))
             return false;
-        }
 
         CtLiteral op = (CtLiteral)candidate;
         String type = getLiteralType(op);
         List<String> targetTypes = Arrays.asList(
-                "int"
+                "int" // TODO: usar Floats, Double,... ?
         );
 
-        if (!targetTypes.contains(type)) {
+        if (!targetTypes.contains(type))
             return false;
-        }
 
+        if (op.toString().equals("1"))
+            return false;
 
         return true;
     }

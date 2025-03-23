@@ -25,13 +25,12 @@ public class NullReturnsMutator extends MutationOperator {
         CtReturn op = (CtReturn) candidate;
         CtExpression returnedExpression = op.getReturnedExpression();
 
-        if (returnedExpression == null) {
-            return false; // TODO es necesario?
-        }
+        if (returnedExpression.toString().equals("null"))
+            return false;
 
-        CtTypeReference typeRef = returnedExpression.getType();
+        CtTypeReference returnType = returnedExpression.getType();
 
-        return typeRef != null && !typeRef.isPrimitive();
+        return returnType != null && !returnType.isPrimitive();
     }
 
     @Override

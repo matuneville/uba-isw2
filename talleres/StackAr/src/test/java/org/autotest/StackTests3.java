@@ -60,5 +60,21 @@ public class StackTests3 extends MutationAnalysisRunner {
         assertEquals("[42,43]", stack.toString());
     }
 
-    // COMPLETAR
+    public void testAreTwoEmptyStacksEqual() throws Exception {
+        // esperamos que al cambiar != por == en la linea 76, este test no lo pase y mate al mutante,
+        // ya que tenemos dos stacks iguales y debería dar true, pero por el if(...) de la 76 no lo va a pasar
+        Stack stackA = createStack(2);
+        Stack stackB = createStack(2);
+        assertEquals(stackA, stackB);
+    }
+
+    public void testCompareTwoNotEqualStacksHashCode() throws Exception{
+        // esperamos que en el mutante, dos stacks que no son equivalentes
+        // compartan hashcode, lo cual está mal
+        Stack stackA = createStack(1);
+        Stack stackB = createStack(1);
+        stackA.push(42);
+        stackB.push(60);
+        assertNotEquals(stackA.hashCode(), stackB.hashCode());
+    }
 }

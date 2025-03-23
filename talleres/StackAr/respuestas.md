@@ -8,13 +8,19 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 ## Ejercicio 1: Resultados de generación de mutantes
 
 1. ¿Cuántos mutantes se generaron en total?
-   - Respuesta: Se generaron 88 mutantes. TODO
+   - Respuesta: Se generaron 75 mutantes
 
 2. ¿Qué operador de mutación generó más mutantes? ¿Cuántos y por qué?
-   - Respuesta: 
+   - Respuesta: Counts:
+     - Binary: 3 + 3 + 5 = 11
+     - Conditionals: 10 + 10 = 20
+     - Constants: 6 + 5 + 8 = 19
+     - Returns: 3 + 3 + 4 + 6 = 16
+     - Unary: 3
+    Conditionals generó más mutantes. Tiene sentido ya que un código suele estar lleno de condicionales. Los algoritmos con los que trabaja un stack deben evaluar muchos condicionales, por ejemplo, validar que no se pueda hacer pop cuando el stack está vacío, para instanciar el stack, entre otros. 
 
 3. ¿Qué operador de mutación generó menos mutantes? ¿Cuántos y por qué?
-   - Respuesta:
+   - Respuesta: Unary generators, generó 3, ya que se utilizan pocos operadores unarios de ++ y --.
 
 ---
 
@@ -22,26 +28,28 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 
 1. ¿Cuántos mutantes vivos y muertos encontraron cada uno de los test suites?
    - **StackTests1**:
-     - Mutantes vivos:
-     - Mutantes muertos:
+     - Mutantes vivos: 56
+     - Mutantes muertos: 19
+     - Mutation score: 25%
    - **StackTests2**:
-     - Mutantes vivos:
-     - Mutantes muertos:
+     - Mutantes vivos: 38
+     - Mutantes muertos:37
+     - Mutation score: 49%
 
 2. ¿Cuál es el mutation score de cada test suite?
-   - **StackTests1**:
-   - **StackTests2**:
+   - **StackTests1**: 25%
+   - **StackTests2**: 49%
 
 ---
 
 ## Ejercicio 3: Mejora del test suite
 
 1. ¿Cuál es el mutation score logrado para los tests de StackTests3?
-   - Respuesta:
+   - Respuesta: 49%
 
 2. ¿Cuántos mutantes vivos y muertos encontraron?
-   - Mutantes vivos:
-   - Mutantes muertos:
+   - Mutantes vivos: 38
+   - Mutantes muertos: 37
 
 3. Comente cuáles son todos los mutantes vivos que quedaron y por qué son equivalentes al programa original (si no lo fueran, todavía es posible mejorar el mutation score).
    - Respuesta:

@@ -27,10 +27,18 @@ public class TrueReturnsMutator extends MutationOperator {
         List<String> targetTypes = Arrays.asList(
                 "boolean"
         );
-        // chequear que no sea false (para no reemplazar false por false)
-        // CtExpression<Boolean> falseRet = ((CtReturn)candidate).getReturnedExpression();
 
-        return targetTypes.contains(type); //&& op != falseRet;
+        if (!targetTypes.contains(type))
+            return false;
+
+        return !returnedExpressionIsTrue((CtReturn) candidate);
+    }
+
+    private static boolean returnedExpressionIsTrue(CtReturn candidate) {
+        CtExpression<Boolean> returned_value = candidate.getReturnedExpression();
+        String returned_value_string = returned_value.toString();
+
+        return returned_value_string.equals("true");
     }
 
     @Override

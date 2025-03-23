@@ -48,6 +48,7 @@ public class EmptyReturnsMutator extends MutationOperator {
                 return op.getFactory().Code().createLiteral("");
             case "int":
                 return op.getFactory().Code().createLiteral(0);
+            // TODO: segun documentación, faltan algunos Empty, pero aca no decía completar.
         }
         return null;
     }

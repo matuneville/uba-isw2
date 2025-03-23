@@ -2,6 +2,7 @@ package org.autotest.operators.returns;
 
 import org.autotest.operators.MutationOperator;
 import spoon.reflect.code.CtExpression;
+import spoon.reflect.code.CtIf;
 import spoon.reflect.code.CtLiteral;
 import spoon.reflect.code.CtReturn;
 import spoon.reflect.declaration.CtElement;
@@ -26,10 +27,18 @@ public class FalseReturnsMutator extends MutationOperator {
         List<String> targetTypes = Arrays.asList(
                 "boolean"
         );
-        // chequear que no sea false (para no reemplazar false por false)
-        // CtExpression<Boolean> falseRet = ((CtReturn)candidate).getReturnedExpression();
 
-        return targetTypes.contains(type); //&& op != falseRet;
+        if (!targetTypes.contains(type))
+            return false;
+
+        return !returnedExpressionIsFalse((CtReturn) candidate);
+    }
+
+    private static boolean returnedExpressionIsFalse(CtReturn candidate) {
+        CtExpression<Boolean> returned_value = candidate.getReturnedExpression();
+        String returned_value_string = returned_value.toString();
+
+        return returned_value_string.equals("false");
     }
 
     @Override
