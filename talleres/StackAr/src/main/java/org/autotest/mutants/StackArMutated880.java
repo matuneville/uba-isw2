@@ -1,7 +1,7 @@
 package org.autotest.mutants;
 
 /**
- * ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.
+ * TrueConditionalsMutator: Se reemplazó la condición 'this == obj' por true en la línea 72.
  */
 public class StackArMutated880 extends org.autotest.Stack {
     private static final int DEFAULT_CAPACITY = 10;
@@ -61,7 +61,7 @@ public class StackArMutated880 extends org.autotest.Stack {
     @java.lang.Override
     public int hashCode() {
         final int prime = 31;
-        int result = 0;
+        int result = 1;
         result = (prime * result) + java.util.Arrays.hashCode(elems);
         result = (prime * result) + readIndex;
         return result;
@@ -69,7 +69,7 @@ public class StackArMutated880 extends org.autotest.Stack {
 
     @java.lang.Override
     public boolean equals(java.lang.Object obj) {
-        if (this == obj) {
+        if (true) {
             return true;
         }
         if (obj == null) {

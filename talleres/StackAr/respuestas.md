@@ -8,16 +8,16 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 ## Ejercicio 1: Resultados de generación de mutantes
 
 1. ¿Cuántos mutantes se generaron en total?
-   - Respuesta: Se generaron 75 mutantes
+   - Respuesta: Se generaron 76 mutantes
 
 2. ¿Qué operador de mutación generó más mutantes? ¿Cuántos y por qué?
    - Respuesta: Counts:
      - Binary: 3 + 3 + 5 = 11
      - Conditionals: 10 + 10 = 20
-     - Constants: 6 + 5 + 8 = 19
+     - Constants: 7 + 5 + 8 = 20
      - Returns: 3 + 3 + 4 + 6 = 16
      - Unary: 3
-    Conditionals generó más mutantes. Tiene sentido ya que un código suele estar lleno de condicionales. Los algoritmos con los que trabaja un stack deben evaluar muchos condicionales, por ejemplo, validar que no se pueda hacer pop cuando el stack está vacío, para instanciar el stack, entre otros. 
+    Conditionals y Constants generaron más mutantes. Tiene sentido ya que el código de StackAr tiene muchos condicionales y constantes simples como 1 o 0. Los algoritmos con los que trabaja un stack deben evaluar muchos condicionales, por ejemplo, validar que no se pueda hacer pop cuando el stack está vacío, para instanciar el stack, entre otros. Al mismo tiempo, trabaja con constantes típicas en indexación como 1, 0 o -1 para indices inválidos. Es por esto que estas clases de mutantes generan la mayor cantidad de mutaciones del código original. 
 
 3. ¿Qué operador de mutación generó menos mutantes? ¿Cuántos y por qué?
    - Respuesta: Unary generators, generó 3, ya que se utilizan pocos operadores unarios de ++ y --.
