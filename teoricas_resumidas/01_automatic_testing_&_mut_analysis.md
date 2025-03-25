@@ -20,8 +20,8 @@ Las pruebas de software son esencialmente una forma de **verificar la consisten
 1. **Test de Sistema**: probar el resultado de usar un sistema. Todo el equipo.
 2. **Test de Integración**: probar funcionamiento entre unidades/módulos y programadores
 3. **Test de Unidad**: chequear comportamiento de una unidad. Mocks. Único programador.
-
-### Errores
+---
+## Errores
 
 Una desviación no buscada ni intencional de lo que es correcto, esperado o verdadero:
 - **Defecto**: Un error en el **código** del programa, específicamente uno que puede crear un infección (y conducir a una falla)
@@ -54,7 +54,23 @@ Para evaluar la calidad de una **test suite**, se utilizan dos enfoques princip
 1. **Code Coverage**: Mide el porcentaje de código que ha sido ejecutado durante las pruebas. Incluye métricas como cobertura de funciones, declaraciones, ramas, etc.
     
 2. **Mutation Analysis**: Consiste en crear versiones mutadas del código y verificar si las pruebas pueden detectar los cambios. Si una mutación no es detectada, indica que la suite de pruebas puede no ser lo suficientemente robusta.
-    
+
+---
+# Coverage: criterios
+
+### 1. Statement Coverage
+
+- **Definición:** Mide el porcentaje de sentencias (líneas de código) ejecutadas durante las pruebas.
+- **Objetivo:** Asegurar que **cada línea de código se ejecute** al menos una vez.
+### 2. Branch Coverage
+
+- **Definición:** Evalúa si todas las posibles ramas de condiciones (ej. `if-else`, `switch`) han sido ejecutadas.
+- **Objetivo:** Asegurar que todas las decisiones lógicas sean probadas en sus **caminos completos** `true` y `false`.
+
+### 3. Edge Testing
+
+- **Definición:** Ejecutar todas las aristas (transiciones de una linea a otra) del CFG al menos una vez.
+- **Objetivo:** Cubrir todos los posibles flujos o **transiciones entre bloques de código**, asegurando que se ejecutó todo posible "salto" de una linea a otra.
 
 ---
 #  Mutation Testing
@@ -63,7 +79,7 @@ Técnica  que consiste en realizar pequeños cambios en el código fuente, gener
 
 Los tests **deben ser capaces de distinguir el programa original de los mutantes**.
 
-![[Pasted image 20250319112036.png]]
+![](../img/operators_mutantes.png)
 
 Cuando una prueba identifica el comportamiento anómalo de un mutante, se dice que **"mata al mutante"**. La **puntuación de mutación** mide la efectividad del conjunto de pruebas en función del porcentaje de mutantes eliminados:
 $$\text{Mutation Score} = \frac{\text{Mutantes Muertos}}{\text{Total Mutantes}}$$
