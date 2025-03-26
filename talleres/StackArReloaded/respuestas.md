@@ -53,13 +53,37 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 
 3. Comente cuáles son todos los mutantes vivos que quedaron y por qué son equivalentes al programa original (si no lo fueran, todavía es posible mejorar el mutation score).
    - Respuesta:
-     - `StackArMutated746 (FalseConditionalsMutator: Se reemplazó la condición 'isEmpty()' por false en la línea 45.)`. No se puede matar este mutante ya que luego realiza la validación nuevamente en `top()`, haciendo que lance la excepción nuevamente.
-     - Los mutantes que respectan al `hashCode`: creemos que son equivalentes ya que hacen que devuelvan un hash diferente, sin romper congruencia entre distintos stacks con sus respectivos hashes (como sí pudimos detectarlo en otro mutante que fue eliminado, mediante un test que en su mutante retornaba iguales hashes para distintos stacks).
+     - `- StackArMutated5196 (FalseConditionalsMutator: Se reemplazó la condición 'isEmpty()' por false en la línea 45.)`. No se puede matar este mutante ya que luego realiza la validación nuevamente en `top()`, haciendo que lance la excepción nuevamente. Por lo tanto, es equivalente.
+     - `- StackArMutated1927 (FalseConditionalsMutator: Se reemplazó la condición 'this == obj' por false en la línea 72.)`. Este mutante también es equivalente, ya que el condicional que cambia solo sirve para el caso en que se compara un objeto StackAr consigo mismo. Al no entrar a ese if, va a dar `true` cuando se vea si es equivalente a sí mismo.
+     - Los mutantes que respectan al `hashCode`: creemos que son equivalentes ya que hacen que devuelvan un hash diferente, sin romper congruencia entre distintos stacks con sus respectivos hashes (como sí pudimos detectarlo en otro mutante que fue eliminado, mediante un test que en su mutante retornaba iguales hashes para distintos stacks). Son los siguientes:
+     ```
+         - StackArMutated2023 (MinusOneConstantMutator: Se reemplazó 31 por -1 en la línea 63.)
+         - StackArMutated1645 (MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 64.)
+         - StackArMutated2614 (OneConstantMutator: Se reemplazó 31 por 1 en la línea 63.)
+         - StackArMutated2011 (MathMutator: Se reemplazó + por - en la línea 65.)
+         - StackArMutated5764 (ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.)
+         - StackArMutated815 (MathMutator: Se reemplazó + por - en la línea 66.)
+         - StackArMutated2095 (MathMutator: Se reemplazó * por / en la línea 65.)
+       ```
     
 4. ¿Cuál es el instruction coverage promedio que lograron para las clases mutadas?
-   - Respuesta: 64%
+   - Respuesta: 63%
+   
+| Coverages de mutantes y mutante de menor coverage |
+|---------------------------------------------------|
+| ![](img/mutants_coverage.png)                     |
+| ![](img/clase_mutada_menor_coverage.jpeg)         |
 
 5. ¿Cuál es el peor instruction coverage que lograron para una clase mutada? ¿Por qué creen que sucede esto?
-   - Respuesta: La que cambia el tamaño default de 10 a -1. Como el constructor no permite instanciar un stack que tiene tamaño negativo y arroja excepción, no puede cubrir todo el resto de lineas.
+   - Respuesta:
+     - `- StackArMutated4781 (TrueConditionalsMutator: Se reemplazó la condición 'capacity < 0' por true en la línea 18.)`. Es fácil ver por que esta clase mutada no tiene tanto coverage de lineas. Como siempre entra al if del tamaño inválido, arroja la excepción, y no cubre el resto de líneas de la clase.
+     ```java
+         public StackAr(int capacity) throws IllegalArgumentException {
+            if (true) { // en vez de if (capacity < 0)
+                throw new IllegalArgumentException();
+            }
+            this.elems = new Object[capacity];
+         }
+     ```
 
    

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZeroConstantMutator.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">StackAr</a> &gt; <a href="index.source.html" class="el_package">org.autotest.operators.constants</a> &gt; <span class="el_source">ZeroConstantMutator.java</span></div><h1>ZeroConstantMutator.java</h1><pre class="source lang-java linenums">package org.autotest.operators.constants;
+
+import org.autotest.operators.MutationOperator;
+import spoon.reflect.code.CtLiteral;
+import spoon.reflect.code.CtUnaryOperator;
+import spoon.reflect.code.UnaryOperatorKind;
+import spoon.reflect.declaration.CtElement;
+
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * Operador de mutación basado en https://pitest.org/quickstart/mutators/#EXPERIMENTAL_CRCR
+ *
+ * Este operador reemplaza los valores de las constantes por cero.
+ */
+<span class="nc" id="L17">public class ZeroConstantMutator extends MutationOperator {</span>
+    @Override
+    public boolean isToBeProcessed(CtElement candidate) {
+<span class="nc" id="L20">        List&lt;String&gt; targetTypes = List.of(</span>
+                &quot;int&quot;
+        );
+<span class="nc" id="L23">        boolean isLiteral = candidate instanceof CtLiteral;</span>
+<span class="nc" id="L24">        boolean isUnaryOperator = candidate instanceof CtUnaryOperator;</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if (isLiteral) {</span>
+<span class="nc" id="L26">            CtLiteral&lt;?&gt; candidate_lit = (CtLiteral&lt;?&gt;)candidate;</span>
+<span class="nc" id="L27">            String type = getLiteralType(candidate_lit);</span>
+
+
+<span class="nc" id="L30">            boolean isNumber = targetTypes.contains(type);</span>
+<span class="nc" id="L31">            boolean isZero = candidate_lit.toString().equals(&quot;0&quot;);</span>
+
+<span class="nc" id="L33">            CtElement parent = candidate.getParent();</span>
+<span class="nc" id="L34">            boolean parentIsUnary = parent instanceof CtUnaryOperator;</span>
+<span class="nc bnc" id="L35" title="All 4 branches missed.">            boolean parentIsNEG = parentIsUnary &amp;&amp; (((CtUnaryOperator&lt;?&gt;)parent).getKind() == UnaryOperatorKind.NEG);</span>
+
+<span class="nc bnc" id="L37" title="All 6 branches missed.">            return !parentIsNEG &amp;&amp; isNumber &amp;&amp; !isZero;</span>
+        }
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        else if (isUnaryOperator) {</span>
+<span class="nc" id="L40">            CtUnaryOperator&lt;?&gt; candidate_unary = (CtUnaryOperator&lt;?&gt;)candidate;</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">            boolean isNEG = candidate_unary.getKind() == UnaryOperatorKind.NEG;</span>
+<span class="nc" id="L42">            CtElement operand = candidate_unary.getOperand();</span>
+
+<span class="nc" id="L44">            boolean operandIsInt = false;</span>
+<span class="nc bnc" id="L45" title="All 2 branches missed.">            if (operand instanceof CtLiteral)</span>
+<span class="nc" id="L46">                operandIsInt = targetTypes.contains(getLiteralType((CtLiteral&lt;?&gt;) operand));</span>
+
+<span class="nc bnc" id="L48" title="All 4 branches missed.">            return isNEG &amp;&amp; operandIsInt;</span>
+        }
+<span class="nc" id="L50">        return false;</span>
+    }
+
+    @Override
+    public void process(CtElement candidate) {
+<span class="nc" id="L55">        boolean isLiteral = candidate instanceof CtLiteral;</span>
+<span class="nc bnc" id="L56" title="All 2 branches missed.">        if (isLiteral) {</span>
+<span class="nc" id="L57">            CtLiteral candidate_lit = (CtLiteral) candidate;</span>
+<span class="nc" id="L58">            candidate_lit.setValue(candidate_lit.getFactory().Code().createLiteral(0));</span>
+<span class="nc" id="L59">        }</span>
+        else { // Es un CtUnaryOperator de tipo NEG, ya filtrado en isToBe
+<span class="nc" id="L61">            CtUnaryOperator unaryOp = (CtUnaryOperator&lt;?&gt;) candidate;</span>
+<span class="nc" id="L62">            unaryOp.setOperand(unaryOp.getFactory().Code().createLiteral(0));</span>
+<span class="nc" id="L63">            unaryOp.setKind(UnaryOperatorKind.POS); // Cambia NEG (-) por POS (+)</span>
+            //System.out.print(unaryOp.toString() + '\n');
+        }
+<span class="nc" id="L66">    }</span>
+
+    private static String getLiteralType(CtLiteral op) {
+<span class="nc" id="L69">        return op.getType().toString();</span>
+    }
+
+    @Override
+    public String describeMutation(CtElement candidate) {
+<span class="nc" id="L74">        return this.getClass().getSimpleName() + &quot;: Se reemplazó &quot; +</span>
+<span class="nc" id="L75">                candidate.toString() + &quot; por 0&quot; +</span>
+<span class="nc" id="L76">                &quot; en la línea &quot; + candidate.getPosition().getLine() + &quot;.&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
