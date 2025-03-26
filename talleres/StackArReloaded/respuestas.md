@@ -17,6 +17,7 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
      - Constants: 7 + 5 + 8 = 20
      - Returns: 3 + 3 + 4 + 6 = 16
      - Unary: 3
+  
     Conditionals y Constants generaron más mutantes. Tiene sentido ya que el código de StackAr tiene muchos condicionales y constantes simples como 1 o 0. Los algoritmos con los que trabaja un stack deben evaluar muchos condicionales, por ejemplo, validar que no se pueda hacer pop cuando el stack está vacío, para instanciar el stack, entre otros. Al mismo tiempo, trabaja con constantes típicas en indexación como 1, 0 o -1 para indices inválidos. Es por esto que estas clases de mutantes generan la mayor cantidad de mutaciones del código original. 
 
 3. ¿Qué operador de mutación generó menos mutantes? ¿Cuántos y por qué?
