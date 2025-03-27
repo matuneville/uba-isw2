@@ -44,6 +44,6 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 
 2. Extender manualmente el test suite para mejorar el mutation score con Pitest:
    - ¿Cuál es el mejor mutation score que se pudo obtener?
-     - Respuesta: 
+     - Respuesta: 97%
    - Si hay mutantes equivalentes, explicar cuáles son y justificar por qué son equivalentes.
-     - Respuesta:
+     - Respuesta: Queda un solo mutante vivo. Dicho mutante reemplaza la multiplicacion por division en la linea 113 que corresponde al metodo hashCode. Como se puede observar, este mutante es equivalente porque la cuenta que se esta haciendo toma dos operandos: 31 y 1. Multiplicar y dividir por 1 es equivalente, lo que resulta en la equivalencia de ambos programas.
