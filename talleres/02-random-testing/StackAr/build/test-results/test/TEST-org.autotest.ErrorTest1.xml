@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.ErrorTest1" tests="50" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:34" hostname="pc35" time="0.007">
+  <properties/>
+  <testcase name="test051()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test052()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test053()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test054()" classname="org.autotest.ErrorTest1" time="0.001"/>
+  <testcase name="test055()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test056()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test057()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test058()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test059()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test060()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test061()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test062()" classname="org.autotest.ErrorTest1" time="0.001"/>
+  <testcase name="test063()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test064()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test065()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test066()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test067()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test068()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test069()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test070()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test071()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test072()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test073()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test074()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test075()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test076()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test077()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test078()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test079()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test080()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test081()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test082()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test083()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test084()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test085()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test086()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test087()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test088()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test089()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test090()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test091()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test092()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test093()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test094()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test095()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test096()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test097()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test098()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <testcase name="test099()" classname="org.autotest.ErrorTest1" time="0.001"/>
+  <testcase name="test100()" classname="org.autotest.ErrorTest1" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

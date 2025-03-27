@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.RegressionTest72" tests="50" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:34" hostname="pc35" time="0.007">
+  <properties/>
+  <testcase name="test3601()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3602()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3603()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3604()" classname="org.autotest.RegressionTest72" time="0.001"/>
+  <testcase name="test3605()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3606()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3607()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3608()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3609()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3610()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3611()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3612()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3613()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3614()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3615()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3616()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3617()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3618()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3619()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3620()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3621()" classname="org.autotest.RegressionTest72" time="0.001"/>
+  <testcase name="test3622()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3623()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3624()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3625()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3626()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3627()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3628()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3629()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3630()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3631()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3632()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3633()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3634()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3635()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3636()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3637()" classname="org.autotest.RegressionTest72" time="0.001"/>
+  <testcase name="test3638()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3639()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3640()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3641()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3642()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3643()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3644()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3645()" classname="org.autotest.RegressionTest72" time="0.001"/>
+  <testcase name="test3646()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3647()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3648()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3649()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <testcase name="test3650()" classname="org.autotest.RegressionTest72" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

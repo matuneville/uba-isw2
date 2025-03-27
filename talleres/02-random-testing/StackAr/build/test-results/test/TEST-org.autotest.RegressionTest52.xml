@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.RegressionTest52" tests="50" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:34" hostname="pc35" time="0.011">
+  <properties/>
+  <testcase name="test2601()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2602()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2603()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2604()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2605()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2606()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2607()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2608()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2609()" classname="org.autotest.RegressionTest52" time="0.001"/>
+  <testcase name="test2610()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2611()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2612()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2613()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2614()" classname="org.autotest.RegressionTest52" time="0.001"/>
+  <testcase name="test2615()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2616()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2617()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2618()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2619()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2620()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2621()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2622()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2623()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2624()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2625()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2626()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2627()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2628()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2629()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2630()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2631()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2632()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2633()" classname="org.autotest.RegressionTest52" time="0.001"/>
+  <testcase name="test2634()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2635()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2636()" classname="org.autotest.RegressionTest52" time="0.001"/>
+  <testcase name="test2637()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2638()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2639()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2640()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2641()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2642()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2643()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2644()" classname="org.autotest.RegressionTest52" time="0.001"/>
+  <testcase name="test2645()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2646()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2647()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2648()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2649()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <testcase name="test2650()" classname="org.autotest.RegressionTest52" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

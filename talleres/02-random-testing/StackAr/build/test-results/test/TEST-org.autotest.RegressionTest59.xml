@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.RegressionTest59" tests="50" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:33" hostname="pc35" time="0.017">
+  <properties/>
+  <testcase name="test2951()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2952()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2953()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2954()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2955()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2956()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2957()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2958()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2959()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2960()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2961()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2962()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2963()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2964()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2965()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2966()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2967()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2968()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2969()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2970()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2971()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2972()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2973()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2974()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2975()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2976()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2977()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2978()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2979()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2980()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2981()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2982()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2983()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2984()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2985()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2986()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2987()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2988()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2989()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2990()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2991()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2992()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2993()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2994()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2995()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2996()" classname="org.autotest.RegressionTest59" time="0.001"/>
+  <testcase name="test2997()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2998()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test2999()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <testcase name="test3000()" classname="org.autotest.RegressionTest59" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.ErrorTest5" tests="50" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:34" hostname="pc35" time="0.022">
+  <properties/>
+  <testcase name="test251()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test252()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test253()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test254()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test255()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test256()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test257()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test258()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test259()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test260()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test261()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test262()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test263()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test264()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test265()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test266()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test267()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test268()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test269()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test270()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test271()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test272()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test273()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test274()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test275()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test276()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test277()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test278()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test279()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test280()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test281()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test282()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test283()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test284()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test285()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test286()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test287()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test288()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test289()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test290()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test291()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <testcase name="test292()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test293()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test294()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test295()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test296()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test297()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test298()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test299()" classname="org.autotest.ErrorTest5" time="0.0"/>
+  <testcase name="test300()" classname="org.autotest.ErrorTest5" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.ErrorTest10" tests="47" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:34" hostname="pc35" time="0.005">
+  <properties/>
+  <testcase name="test501()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test502()" classname="org.autotest.ErrorTest10" time="0.001"/>
+  <testcase name="test503()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test504()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test505()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test506()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test507()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test508()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test509()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test510()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test511()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test512()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test513()" classname="org.autotest.ErrorTest10" time="0.001"/>
+  <testcase name="test514()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test515()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test516()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test517()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test518()" classname="org.autotest.ErrorTest10" time="0.001"/>
+  <testcase name="test519()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test520()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test521()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test522()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test523()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test524()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test525()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test526()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test527()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test528()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test529()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test530()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test531()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test532()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test533()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test534()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test535()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test536()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test537()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test538()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test539()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test540()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test541()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test542()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test543()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test544()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test545()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test546()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <testcase name="test547()" classname="org.autotest.ErrorTest10" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

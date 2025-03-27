@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.autotest.RegressionTest75" tests="19" skipped="0" failures="0" errors="0" timestamp="2025-03-26T22:49:33" hostname="pc35" time="0.007">
+  <properties/>
+  <testcase name="test3751()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3752()" classname="org.autotest.RegressionTest75" time="0.001"/>
+  <testcase name="test3753()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3754()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3755()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3756()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3757()" classname="org.autotest.RegressionTest75" time="0.001"/>
+  <testcase name="test3758()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3759()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3760()" classname="org.autotest.RegressionTest75" time="0.001"/>
+  <testcase name="test3761()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3762()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3763()" classname="org.autotest.RegressionTest75" time="0.001"/>
+  <testcase name="test3764()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3765()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3766()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3767()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <testcase name="test3768()" classname="org.autotest.RegressionTest75" time="0.001"/>
+  <testcase name="test3769()" classname="org.autotest.RegressionTest75" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
