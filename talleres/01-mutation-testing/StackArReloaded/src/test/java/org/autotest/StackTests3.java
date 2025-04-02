@@ -168,4 +168,14 @@ public class StackTests3 extends MutationAnalysisRunner {
         Stack stack = createStack(0);
         assertThrows(IllegalStateException.class, () -> stack.push(42));
     }
+
+    public void testStackHasCorrectHashCode() throws Exception {
+        Stack stack = createStack(5);
+        stack.push(42);
+        stack.push(60);
+        stack.push(60);
+        stack.push(67876);
+        assertEquals(stack.hashCode(), -2082610753);
+
+    }
 }
