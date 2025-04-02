@@ -56,16 +56,10 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
    - Respuesta:
      - `- StackArMutated5196 (FalseConditionalsMutator: Se reemplazó la condición 'isEmpty()' por false en la línea 45.)`. No se puede matar este mutante ya que luego realiza la validación nuevamente en `top()`, haciendo que lance la excepción nuevamente. Por lo tanto, es equivalente.
      - `- StackArMutated1927 (FalseConditionalsMutator: Se reemplazó la condición 'this == obj' por false en la línea 72.)`. Este mutante también es equivalente, ya que el condicional que cambia solo sirve para el caso en que se compara un objeto StackAr consigo mismo. Al no entrar a ese if, va a dar `true` cuando se vea si es equivalente a sí mismo.
-     - Los mutantes que respectan al `hashCode`: creemos que son equivalentes ya que hacen que devuelvan un hash diferente, sin romper congruencia entre distintos stacks con sus respectivos hashes (como sí pudimos detectarlo en otro mutante que fue eliminado, mediante un test que en su mutante retornaba iguales hashes para distintos stacks). Son los siguientes:
+     - Un mutante respecto al `hashCode`: es equivalente ya que esta reemplazando multiplicacion por division en una linea en la que la operacion es aplicada con 1, siendo facilmente observable que ambos programas resultan equivalente por la naturaleza de ambas operaciones.
      ```
-         - StackArMutated2023 (MinusOneConstantMutator: Se reemplazó 31 por -1 en la línea 63.)
-         - StackArMutated1645 (MinusOneConstantMutator: Se reemplazó 1 por -1 en la línea 64.)
-         - StackArMutated2614 (OneConstantMutator: Se reemplazó 31 por 1 en la línea 63.)
-         - StackArMutated2011 (MathMutator: Se reemplazó + por - en la línea 65.)
-         - StackArMutated5764 (ZeroConstantMutator: Se reemplazó 1 por 0 en la línea 64.)
-         - StackArMutated815 (MathMutator: Se reemplazó + por - en la línea 66.)
-         - StackArMutated2095 (MathMutator: Se reemplazó * por / en la línea 65.)
-       ```
+     - StackArMutated2095 (MathMutator: Se reemplazó * por / en la línea 65.)
+     ```
     
 4. ¿Cuál es el instruction coverage promedio que lograron para las clases mutadas?
    - Respuesta: 63%
