@@ -46,11 +46,11 @@ Completar este documento con las respuestas correspondientes a los ejercicios pl
 ## Ejercicio 3: Mejora del test suite
 
 1. ¿Cuál es el mutation score logrado para los tests de StackTests3?
-   - Respuesta: 88%
+   - Respuesta: 96%
 
 2. ¿Cuántos mutantes vivos y muertos encontraron?
-   - Mutantes vivos: 9
-   - Mutantes muertos: 67
+   - Mutantes vivos: 3
+   - Mutantes muertos: 73
 
 3. Comente cuáles son todos los mutantes vivos que quedaron y por qué son equivalentes al programa original (si no lo fueran, todavía es posible mejorar el mutation score).
    - Respuesta:
