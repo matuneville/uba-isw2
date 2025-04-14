@@ -23,6 +23,9 @@ class TestSuite(unittest.TestCase):
 ```
 ### a) Asumiendo un $K=1$ ¿Cuál es el valor de la distancia de branch no normalizada para cada decisión si ejecutamos el test suite?
 
+Las branch distances para cada test case son:  
+
+
 | test1 | distancia True | distancia False |
 | ----- | -------------- | --------------- |
 | C1    | $1000$         | $0$             |
@@ -40,6 +43,14 @@ class TestSuite(unittest.TestCase):
 | C1    | $0$            | $2$             |
 | C2    | $0$            | $0$             |
 | C3    | $1$            | $0$             |
+
+Luego, para todo el test suite (tomando el mínimo de cada uno), nos queda:
+
+| test suite | distancia True | distancia False |
+| ---------- | -------------- | --------------- |
+| C1         | $0$            | $0$             |
+| C2         | $0$            | $0$             |
+| C3         | $1$            | $0$             |
 ### b) ¿Cuál es el cubrimiento de líneas?
 
 Hay un cubrimiento de líneas de $7/8$, pues la línea que corresponde al cuerpo de la condición C1 no es cubierta por ningún test case.
@@ -55,3 +66,63 @@ Las branches son:
 La última no es cubierta por el test suite, por lo que el cubrimiento de ramas es de $3/4$.
 
 ---
+## Ejercicio 2
+
+```python
+def testme(x: int, y: int) -> bool:
+    result: bool = False
+    z: int = 2 * y
+    if z == x:  # c1
+        if x > y + 10:  # c2
+            result = True
+    return result
+
+
+class TestSuite(unittest.TestCase):
+    def test1(self):
+        self.assertEqual(False, testme(0, 0))
+    
+    def test2(self):
+        self.assertEqual(False, testme(1, 1))
+    
+    def test3(self):
+        self.assertEqual(False, testme(2, 2))
+```
+
+### a) Completar la tabla con los valores de la distancia de branch no normalizada para cada decisión luego de ejecutar todo el test suite. El valor de $K$ para la distancia de branch es $\text{0.5}$.
+
+Usando $K = 1$:
+
+| test1 | distancia True | distancia False |
+| ----- | -------------- | --------------- |
+| C1    | $0$            | $1$             |
+| C2    | $21$           | $0$             |
+
+| test2 | distancia True | distancia False |
+| ----- | -------------- | --------------- |
+| C1    | $1$            | $0$             |
+| C2    | $\infty$       | $\infty$        |
+
+| test3 | distancia True | distancia False |
+| ----- | -------------- | --------------- |
+| C1    | $2$            | $0$             |
+| C2    | $\infty$       | $\infty$        |
+
+Luego, la branch distance para cada condición para el test suite (nuevamente tomando los mínimos cuadrantes), con $K = 0.5$, es de:
+
+| test3 | distancia True | distancia False |
+| ----- | -------------- | --------------- |
+| C1    | $0$            | $0$             |
+| C2    | $10.5$         | $0$             |
+
+### b) ¿Cuál es el cubrimiento de líneas?
+
+Hay un cubrimiento de líneas de $5/6$, pues la línea que corresponde al cuerpo de la condición C2 no es cubierta por ningún test case.
+
+### c) ¿Cuál es el cubrimiento de branches?
+
+Las posibles branches son:
+- not C1
+- C1 and not C2
+- C1 and C2
+Esta última no es cubierta, por lo que el cubrimiento de branches es de $2/3$.
