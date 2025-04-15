@@ -190,3 +190,13 @@ def factorial(n: int) -> int:
 
 ### c) Escribir el grafo de control dependencia
 
+
+| Dependence Control Graph |
+| ------------------------ |
+| ![](../img/DCG.png)      |
+
+---
+
+## Ejercicio 8
+
+> TODO: d) Calcular las distancias en el grafo de control dependencia al target (approach level) de los siguientes inputs
