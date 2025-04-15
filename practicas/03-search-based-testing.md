@@ -126,3 +126,67 @@ Las posibles branches son:
 - C1 and not C2
 - C1 and C2
 Esta última no es cubierta, por lo que el cubrimiento de branches es de $2/3$.
+
+---
+## Ejercicio 5
+
+```python
+def func(x: int) -> int:
+    a: int = x + 1
+    b: int = a * 2
+    if b > 10:
+        c: int = b - x
+    else:
+        c: int = b + x
+    d: int = c ** 2
+    return d
+```
+### a) Escribir el control flow graph
+
+| CFG                   |
+| --------------------- |
+| ![](../img/CFG_1.png) |
+
+### b) Escribir los dominadores y post-dominadores de cada nodo del control flow graph
+
+| Nodo | Dominadores | Post-dominadores |
+| ---- | ----------- | ---------------- |
+| A    | A           | A, B, E          |
+| B    | A, B        | B, E             |
+| C    | A, B, C     | C, E             |
+| D    | A, B, D     | D, E             |
+| E    | A, B, E     | E                |
+
+---
+## Ejercicio 7
+
+```python
+def factorial(n: int) -> int:
+    if n == 0:
+        return 1
+    else:
+        result: int = 1
+        for i in range(1, n + 1):
+            result *= i
+        return result
+```
+
+### a) Escribir el control flow graph
+
+| CFG                   |
+| --------------------- |
+| ![](../img/CFG_2.png) |
+
+### b) Escribir los dominadores y postdominadores de cada nodo del control flow graph
+
+| Nodo | Dominadores | Post-dominadores |
+| ---- | ----------- | ---------------- |
+| A    | A           | A                |
+| B    | A, B        | B                |
+| C    | A, C        | D, F             |
+| D    | A, C, D     | C, D, F          |
+| E    | A, C, D, E  | E, D, F          |
+| F    | A, C, D, F  | F                |
+
+### c) Escribir el grafo de control dependencia
+
