@@ -1,0 +1,23 @@
+(declare-const k Int)
+
+; c1_0 and c2_0 
+
+; c1_0 = (0 < 3)        (assert (< 0 3))
+; c2_0 = (5 + k == 0)   (assert (= 0 (+ 5 k)))
+; c1_1 = (1 < 3)        (assert (< 1 3))
+; c2_1 = (1 + k == 0)   (assert (= 0 (+ 1 k)))
+; c1_2 = (2 < 3)        (assert (< 2 3))
+; c2_2 = (3 + k == 0)   (assert (= 0 (+ 3 k)))
+; c1_3 = (3 < 3)        (assert (< 3 3))
+
+(assert (< 0 3))          ; c1_0
+(assert (= 0 (+ 5 k)))    ; c2_0
+
+(check-sat)
+(get-model)
+
+; sat
+;(
+;  (define-fun k () Int
+;    (- 5))
+;)
