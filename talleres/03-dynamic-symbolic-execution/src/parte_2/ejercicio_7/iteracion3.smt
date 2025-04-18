@@ -6,13 +6,11 @@
 (assert (< 0 n)) ; c1_0
 (assert (< 1 n)) ; c1_1
 
+(assert (< 2 n)) ; c1_2
+
 (assert (<= n 2)) ; u(c1) <= 2
 
 (check-sat)
 (get-model)
 
-; sat
-; (model 
-;   (define-fun n () Int
-;     2)
-; )
+; unsat

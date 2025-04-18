@@ -5,6 +5,8 @@
 
 (assert (< 0 n)) ; c1_0
 
+(assert (<= n 2)) ; u(c1) <= 2
+
 (check-sat)
 (get-model)
 
