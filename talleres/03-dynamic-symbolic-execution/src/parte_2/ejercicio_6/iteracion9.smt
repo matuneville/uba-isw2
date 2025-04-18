@@ -1,4 +1,4 @@
-(declare-const k Int)
+(declare-const k Real)
 
 ; c1_0 and c2_0 
 
@@ -18,6 +18,6 @@
 
 ; sat
 ;(
-;  (define-fun k () Int
-;    (- 5))
+;  (define-fun k () Real
+;    (- 5.0))
 ;)

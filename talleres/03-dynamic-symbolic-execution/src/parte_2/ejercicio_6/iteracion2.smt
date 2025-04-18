@@ -1,4 +1,4 @@
-(declare-const k Int)
+(declare-const k Real)
 
 ; c1_0 and not c2_0 and c1_1 and not c2_1 and c1_2 and c2_2
 
@@ -22,6 +22,6 @@
 
 ;sat
 ;(
-;  (define-fun k () Int
-;    (- 3))
+;  (define-fun k () Real
+;    (- 3.0))
 ;)
