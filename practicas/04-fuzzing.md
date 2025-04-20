@@ -3,7 +3,7 @@
 La energía de un input $s$ se define como $e(s)$ donde $p(s)$ es el camino que recorrió la ejecución de $s$ y $f(p(s))$ es la frecuencia de apariciones de un camino en el test suite
 
 $$
-e(s) = \frac{1}{f(p(s))^a}
+e(s) = \frac{1}{f(p(s))^a}  
 $$
 ---
 # Ejercicio 1
@@ -17,7 +17,7 @@ def crashme(s: str) -> None: # 0
             if len(s) > 2 and s[2] == 'd': # 3
                 if len(s) > 3 and s[3] == '!': # 4
                     raise Exception() # 5
-````
+```
 
 Asumiendo que tenemos un boosted greybox fuzzer con exponente $a=5$ y el siguiente conjunto inicial de inputs: ‘’, ‘a’, ‘b’, ‘c’, ‘d’, ‘aa’, ‘ab’, ‘ac’, ‘ba’, ‘bb’, ‘bc’, ‘bad’.
 
@@ -55,6 +55,7 @@ Con las frecuencias de los caminos, obtenemos para los inputs:
 | 'bb'      | [0, 1]        | $1/3^5$        |
 | 'bc'      | [0, 1]        | $1/3^5$        |
 | 'bad'     | [0, 1, 2, 3]  | $1/1^5 = 1$    |
+
 ### c) ¿Cuál es la probabilidad que el fuzzer elija el input "bad" para mutarlo?
 
 $$
@@ -100,7 +101,7 @@ Asumiendo que tenemos un **boosted greybox fuzzer** con **exponente $a = 4$** y 
 
 ### a) Indicar la energía de cada input en el conjunto inicial.
 
-| Input         | Camino (números de condiciones tomadas) $p(s)$ | Frecuencia (actual) |
+| Input $s$     | Camino (números de condiciones tomadas) $p(s)$ | Frecuencia (actual) |
 | ------------- | ---------------------------------------------- | ------------------- |
 | hola+mundo    | [1, 1, 1, 1, 2, 1, 1, 1, 1, 1]                 | 1                   |
 | hello+world   | [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1]              | 1                   |
