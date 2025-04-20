@@ -2,9 +2,7 @@
 
 La energía de un input $s$ se define como $e(s)$ donde $p(s)$ es el camino que recorrió la ejecución de $s$ y $f(p(s))$ es la frecuencia de apariciones de un camino en el test suite
 
-$$
-e(s) = \frac{1}{f(p(s))^a}  
-$$
+$$e(s) = \frac{1}{f(p(s))^a}$$
 ---
 # Ejercicio 1
 
