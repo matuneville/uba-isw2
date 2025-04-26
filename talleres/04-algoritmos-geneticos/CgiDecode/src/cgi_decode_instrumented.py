@@ -19,7 +19,7 @@ def cgi_decode_instrumented(s: str):
 
     while evaluate_condition(1, 'Lt', i, len(s)):  # c1
         c = s[i]
-
+        #   print(f"\nchar actual: {c}\n")
         if evaluate_condition(2,'Eq', c, '+'):  # c2
             t += ' '
         elif evaluate_condition(3, 'Eq', c, '%'):  # c3

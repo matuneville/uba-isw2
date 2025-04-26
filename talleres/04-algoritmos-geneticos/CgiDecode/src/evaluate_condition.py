@@ -53,6 +53,8 @@ def has_reached_condition(condition_num: int) -> bool:
 def evaluate_condition(condition_num: int, op: str, lhs: Union[str, int], rhs: Union[str, int, Dict]) -> bool:
     global condition_result, branch_distance
 
+    # TODO chequear si esta bien
+
     if isinstance(lhs, str):
         lhs = ord(lhs)
     if isinstance(rhs, str):
