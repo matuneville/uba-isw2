@@ -2,6 +2,17 @@
 (declare-const b Int)
 (declare-const c Int)
 
+; c1=(a<=0 or b<=0 or c<=0)
+; not c1 = a>0 and b>0 and c>0
+
+; c2=(not (a + b > c and a + c > b and b + c > a))
+; not c2 = a + b > c and a + c > b and b + c > a
+
+; c3=(a == b and b == c)
+; not c3 = a != b or b != c
+
+; c4=(a == b or b == c or a == c)
+
 ; Not C1
 (assert (> a 0))
 (assert (> b 0))
@@ -16,7 +27,8 @@
 (assert (or (not (= a b)) (not (= b c))))
 
 ; C4
-(assert (or (= a b) (= b c) (= a c)))
+;(assert (or (= a b) (= b c) (= a c)))
+(assert (or (= a b) (and (= b c) (= a c))))
 
 
 (check-sat)

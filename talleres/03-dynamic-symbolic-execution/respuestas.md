@@ -24,7 +24,7 @@ Branch coverage del 100%.
 
 ### b)
 
-Branch coverage del 39.39%.  
+**Branch coverage del 100%**.  
 
 ### c)
 
