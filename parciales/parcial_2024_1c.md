@@ -95,4 +95,8 @@ def parse_email(email: str) -> List[Optional[str]]:
 | #11 `user+tag@example.com`             | 0, 2, 4, 6 | 6                      | 7                     | $1/7^3$     |
 | #12 `john.smith@subdomain.example.org` | 0, 2, 4, 6 | 7                      | 7                     | $1/7^3$     |
 #### b)
-Probabilidad de elegir input #3: $$\frac{e(input_3)}{\sum_i e_i} = \frac{1/7^3}{1/7^3 \times 7 + 1/2^3 \times 4 + 1}$$
+Probabilidad de elegir input #3:
+
+$$
+\frac{e(input_3)}{\sum_i e_i} = \frac{1/7^3}{1/7^3 \times 7 + 1/2^3 \times 4 + 1}
+$$
