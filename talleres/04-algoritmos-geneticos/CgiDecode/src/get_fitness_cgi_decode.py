@@ -17,16 +17,16 @@ def get_fitness_cgi_decode(individual: Individual) -> float:
     run_all_test_cases_from_individual(individual)
     global distances_true, distances_false
 
-    # TODO
     for i in range(1, 6):
         if has_reached_condition(i):
             distance_true = get_true_distance(i)
+            distance_false = get_false_distance(i)
             fitness += normalize(distance_true)
+            fitness += normalize(distance_false)
         else:
-            fitness += 1
+            fitness += 2 # OJO
 
     return fitness
-
 
 
 def run_all_test_cases_from_individual(individual):

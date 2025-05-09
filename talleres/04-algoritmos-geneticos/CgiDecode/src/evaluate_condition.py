@@ -48,55 +48,55 @@ def has_reached_condition(condition_num: int) -> bool:
     global distances_true, distances_false
     return condition_num in distances_true.keys() or condition_num in distances_false.keys()
 
-# a operación de comparación. Las comparaciones puede ser “Eq” (==), “Ne” (!=), “Lt”
-# (<), “Gt” (>), “Le” (<=), “Ge” (>=), “In” (pertenencia a una colección, e.g., x ∈ C)
+
 def evaluate_condition(condition_num: int, op: str, lhs: Union[str, int], rhs: Union[str, int, Dict]) -> bool:
-    global condition_result, branch_distance
-
-    # TODO chequear si esta bien
-
-    if isinstance(lhs, str):
+    distance_true = 0
+    distance_false = 0
+    
+    if type(rhs) is str:
         lhs = ord(lhs)
-    if isinstance(rhs, str):
         rhs = ord(rhs)
 
-    if op == 'Eq':
-        condition_result = lhs == rhs
-        branch_distance = abs(lhs - rhs)
+    if op == "Eq":
+        if lhs == rhs:
+            distance_false += 1
+        else:
+            distance_true += abs(lhs - rhs)
 
-    elif op == 'Ne':
-        condition_result = lhs != rhs
-        branch_distance = abs(lhs - rhs)
+    elif op == "Ne":
+        if lhs != rhs:
+            distance_false += abs(lhs - rhs)
+        else:
+            distance_true += 1
 
-    elif op == 'Ge':
-        condition_result = lhs >= rhs
-        branch_distance = abs(lhs - rhs)
+    elif op == "Lt":
+        if lhs < rhs:
+            distance_false = rhs - lhs
+        else:
+            distance_true = lhs - rhs + 1
 
-    elif op == 'Le':
-        condition_result = lhs <= rhs
-        branch_distance = abs(lhs - rhs)
+    elif op == "Gt":
+        if lhs > rhs:
+            distance_false = lhs - rhs
+        else:
+            distance_true = rhs - lhs + 1
 
-    elif op == 'Lt':
-        condition_result = lhs < rhs
-        branch_distance = abs(lhs - rhs) + 1
+    elif op == "Le":
+        if lhs <= rhs:
+            distance_false = rhs - lhs + 1
+        else:
+            distance_true = lhs - rhs
 
-    elif op == 'Gt':
-        condition_result = lhs > rhs
-        branch_distance = abs(lhs - rhs) + 1
+    elif op == "Ge":
+        if lhs >= rhs:
+            distance_false = lhs - rhs + 1
+        else:
+            distance_true = rhs - lhs
 
-    elif op == 'In':
-        branch_distance = min([abs(lhs - ord(key)) for key in rhs.keys()])
-        condition_result = branch_distance == 0
-
-    else:
-        raise ValueError('Unknown condition operator')
-
-    update_condition_distances_for_math_ops(condition_num, condition_result, branch_distance)
-    return condition_result
+    elif op == "In":
+        distance_true = min(abs(ord(clave) - ord(lhs)) for clave in rhs)
+        distance_false = 1 if distance_true == 0 else 0
 
 
-def update_condition_distances_for_math_ops(condition_num, condition_result, branch_distance):
-    if condition_result:
-        update_maps(condition_num, 0, branch_distance)
-    else:
-        update_maps(condition_num, branch_distance, 0)
+    update_maps(condition_num, distance_true, distance_false)
+    return distance_true == 0
