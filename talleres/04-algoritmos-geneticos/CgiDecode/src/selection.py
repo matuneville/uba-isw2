@@ -12,7 +12,7 @@ def tournament_selection(population: List[Individual], tournament_size: int) -> 
     """
     competitors = sample(population, tournament_size)
 
-    winner = max(competitors, key=lambda individual: get_fitness_cgi_decode(individual))
+    winner = max(competitors, key=lambda individual: individual.get_fitness())
 
     return winner
 
