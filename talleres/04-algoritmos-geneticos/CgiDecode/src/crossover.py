@@ -1,7 +1,7 @@
 from random import randint, random
 from typing import List, Tuple
 
-from individual import Individual
+from src.individual import Individual
 
 
 def single_point_crossover(parent1: Individual, parent2: Individual) -> Tuple[Individual, Individual]:
@@ -26,7 +26,7 @@ def crossover(crossover_function, crossover_prob, parent1: Individual, parent2: 
     Realiza el cruce entre dos padres, dada una probabilidad.
     """
     if random() < crossover_prob:
-        offspring1, offspring2 = single_point_crossover(parent1, parent2)
+        offspring1, offspring2 = crossover_function(parent1, parent2)
     
     else:
         offspring1, offspring2 = parent1, parent2
