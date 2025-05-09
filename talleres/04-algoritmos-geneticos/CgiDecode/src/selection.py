@@ -10,28 +10,18 @@ def tournament_selection(population: List[Individual], tournament_size: int) -> 
     Selecciona un individuo de la poblacion usando seleccion por torneo.
     El tamaño del torneo es el número de individuos que competiran en el mismo.
     """
-    
     competitors = sample(population, tournament_size)
 
-    current_winner = competitors[0]
-    current_winner_fitness = get_fitness_cgi_decode(competitors[0])
+    winner = max(competitors, key=lambda individual: get_fitness_cgi_decode(individual))
 
-    for competitor in competitors:
-        current_competitor_fitness = get_fitness_cgi_decode(competitor)
-
-        if current_competitor_fitness > current_winner_fitness:
-            current_winner = competitor
-            current_winner_fitness = current_competitor_fitness
-
-    return current_winner
+    return winner
 
 
 def selection(selection_function, tournament_size: int, population: list[Individual]) -> Tuple[Individual, Individual]:
     """
     Selecciona dos individuos de la poblacion usando seleccion por torneo.
     """
-    parent1 = None
-    parent2 = None
-    # TODO: COMPLETAR
+    parent1 = selection_function(population, tournament_size)
+    parent2 = selection_function(population, tournament_size)
 
     return parent1, parent2
