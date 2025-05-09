@@ -22,3 +22,6 @@ class Individual:
 
     def get_fitness(self):
         return self._fitness
+    
+    def add_test_case(self, test_case):
+        self.test_suite.append(test_case)
