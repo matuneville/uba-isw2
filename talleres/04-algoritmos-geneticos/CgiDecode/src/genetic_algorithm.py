@@ -29,15 +29,14 @@ class GeneticAlgorithm:
         """
         Dado el fitness de un individuo, retorna True si cubre todos los objetivos.
         """
-        # TODO: COMPLETAR
-        return False
+        return fitness_individual == 0
 
     def calculate_best_individual(self, population):
         """
         Guarda el mejor individuo y su fitness en las variables de instancia, self.best_individual y
         self.fitness_best_individual
         """
-        # TODO: COMPLETAR
+        # TODO best_individual = max(population, key= lambda individual: individual.get_fitness())
         pass
 
     def run(self):
@@ -45,8 +44,8 @@ class GeneticAlgorithm:
         Ejecuta el algoritmo genetico.
         """
         # Generar y evaluar la poblacion inicial
-        population = None # TODO: COMPLETAR
-        # TODO: COMPLETAR
+        population = create_population()
+        evaluate_population(population)
 
         # Imprimir el mejor valor de fitness encontrado
         self.calculate_best_individual(population)
@@ -55,19 +54,20 @@ class GeneticAlgorithm:
         # Continuar mientras la cantidad de generaciones es menor que 1000
         # y no haya ningun individuo que cubra todos los objetivos
 
-        while False: # TODO: COMPLETAR
+        while self.should_keep_evolving():
             # Producir una nueva poblacion basándose en la anterior, mediante crossover y mutation.
             new_population = []
 
             while len(new_population) < self.population_size:
                 # selection
-                parent1, parent2 = None, None # TODO: COMPLETAR
+                parent1, parent2 = selection(XXX, self.tournament_size, self.population_size)
 
                 # crossover
-                offspring1, offspring2 = None, None # TODO: COMPLETAR
+                offspring1, offspring2 = crossover(YYY, self.p_crossover, parent1, parent2)
 
                 # mutation
-                # TODO: COMPLETAR
+                ## creo que no hace falta tomar el return, pero entre tantas funciones de mutacion me mareé asi que lo tomo
+                offspring1, offspring2 = mutate(offspring1), mutate(offspring2)
 
                 # Añadir los hijos a la nueva poblacion
                 new_population.append(offspring1)
@@ -76,7 +76,7 @@ class GeneticAlgorithm:
             self.generation += 1
 
             # Una vez creada, evaluarla y reemplazar la poblacion anterior con la nueva
-            # TODO: COMPLETAR
+            evaluate_population(new_population)
             population = new_population
 
             # Imprimir el mejor valor de fitness
@@ -85,3 +85,6 @@ class GeneticAlgorithm:
 
         # retornar el mejor individuo de la última generacion
         return self.best_individual
+
+    def should_keep_evolving(self):
+        return self.generation < 1000 and self.covered_all_branches(self.fitness_best_individual)
