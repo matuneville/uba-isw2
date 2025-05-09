@@ -2,8 +2,6 @@ from random import sample
 from typing import Tuple, List
 
 from src.individual import Individual
-from src.get_fitness_cgi_decode import get_fitness_cgi_decode
-
 
 def tournament_selection(population: List[Individual], tournament_size: int) -> Individual:
     """
@@ -12,7 +10,7 @@ def tournament_selection(population: List[Individual], tournament_size: int) -> 
     """
     competitors = sample(population, tournament_size)
 
-    winner = max(competitors, key=lambda individual: individual.get_fitness())
+    winner = min(competitors, key=lambda individual: individual.get_fitness())
 
     return winner
 
