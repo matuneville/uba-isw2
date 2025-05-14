@@ -1,8 +1,8 @@
 from src.create_population import create_population
-from src.crossover import crossover
+from src.crossover import crossover, single_point_crossover
 from src.evaluate_population import evaluate_population
 from src.mutate import mutate
-from src.selection import selection
+from src.selection import selection, tournament_selection
 
 
 class GeneticAlgorithm:
@@ -36,15 +36,15 @@ class GeneticAlgorithm:
         Guarda el mejor individuo y su fitness en las variables de instancia, self.best_individual y
         self.fitness_best_individual
         """
-        # TODO best_individual = max(population, key= lambda individual: individual.get_fitness())
-        pass
+        self.best_individual = min(population, key= lambda individual: individual.get_fitness())
+        self.fitness_best_individual = self.best_individual.get_fitness()
 
     def run(self):
         """
         Ejecuta el algoritmo genetico.
         """
         # Generar y evaluar la poblacion inicial
-        population = create_population()
+        population = create_population(self.population_size)
         evaluate_population(population)
 
         # Imprimir el mejor valor de fitness encontrado
@@ -60,10 +60,10 @@ class GeneticAlgorithm:
 
             while len(new_population) < self.population_size:
                 # selection
-                parent1, parent2 = selection(XXX, self.tournament_size, self.population_size)
+                parent1, parent2 = selection(tournament_selection, self.tournament_size, self.population_size)
 
                 # crossover
-                offspring1, offspring2 = crossover(YYY, self.p_crossover, parent1, parent2)
+                offspring1, offspring2 = crossover(single_point_crossover, self.p_crossover, parent1, parent2)
 
                 # mutation
                 ## creo que no hace falta tomar el return, pero entre tantas funciones de mutacion me mareé asi que lo tomo
