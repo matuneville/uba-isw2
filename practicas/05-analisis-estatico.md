@@ -72,3 +72,65 @@ La suma queda definida como:
 | **≥0** | ⊥   | ⊤   | ⊤   | ≥0  | ≥0  | +   | ⊤   |
 | **+**  | ⊥   | ⊤   | ⊤   | +   | +   | +   | ⊤   |
 | **⊤**  | ⊥   | ⊤   | ⊤   | ⊤   | ⊤   | ⊤   | ⊤   |
+
+---
+# 2da Parte  
+
+- $\text{OUT}[n] = \text{GEN}[n] \cup (\text{IN}[n] - \text{KILL}[n])$
+- $\text{IN}[n] = \bigcup \text{OUT}[p] \quad \text{(para cada predecesor p de n)}$
+  
+- $\text{GEN}[n]$: qué definición genera (crea) el nodo `n` — es la propia instrucción si define una variable.  
+- $\text{KILL}[n]$: qué definiciones previas de esa misma variable se anulan (matan) porque fueron sobrescritas por este nodo.  
+
+---
+## Ejercicio 8
+
+```c
+1: entry
+2: x = y
+3: y = 1
+4: (x != 1) ?
+5:    y = x * y
+6:    x = x - 1
+7: exit
+```
+
+GEN/KILL por nodo:  
+
+| Nodo | Instrucción | GEN | KILL |
+| ---- | ----------- | --- | ---- |
+| 2    | x = y       | {2} | ∅    |
+| 3    | y = 1       | {3} | ∅    |
+| 4    | cond        | ∅   | ∅    |
+| 5    | y = x * y   | {5} | {3}  |
+| 6    | x = x - 1   | {6} | {2}  |
+| 7    | exit        | ∅   | ∅    |
+
+La tabla del algorítmo caótico iterativo nos queda:  
+
+| Nodo n          | IN[n] = ∪ OUT[pred[n]]  | IN[n]           | OUT[n] = GEN[n] ∪ (IN[n] − KILL[n])  | OUT[n]       |
+| --------------- | ----------------------- | --------------- | ------------------------------------ | ------------ |
+| **1**           | —                       | —               | ∅                                    | ∅            |
+| **2**           | OUT[1]                  | ∅               | {2} ∪ (∅ − ∅)                        | {2}          |
+| **3**           | OUT[2]                  | {2}             | {3} ∪ ({2} − ∅)                      | {2, 3}       |
+| **4**           | OUT[3]                  | {2, 3}          | ∅ ∪ ({2, 3} − ∅)                     | {2, 3}       |
+| **5**           | OUT[4]                  | {2, 3}          | {5} ∪ ({2, 3} − {3})                 | {2, 5}       |
+| **6**           | OUT[5]                  | {2, 3, 5}       | {6} ∪ ({2, 3, 5} − {2})              | {3, 5, 6}    |
+| **4** (2da vez) | OUT[3] ∪ OUT[6]         | {2, 3, 5, 6}    | ∅ ∪ ({2, 3, 5, 6} − ∅)               | {2, 3, 5, 6} |
+| **5** (2da vez) | OUT[4] (2da vez)        | {2, 3, 5, 6}    | {5} ∪ ({2, 3, 5, 6} − {3})           | {2, 5, 6}    |
+| **6** (2da vez) | OUT[5] (2da vez)        | {2, 5, 6}       | {6} ∪ ({2, 5, 6} − {2})              | {5, 6}       |
+| **4** (3ra vez) | OUT[3] ∪ OUT[6 2da vez] | {2, 3} ∪ {5, 6} | ∅ ∪ ({2, 3, 5, 6} − ∅)               | {2, 3, 5, 6} |
+| ...             | ...                     | ...             | se estabilizan los valores del ciclo | ...          |
+| **7**           | OUT[4] (estable)        | {2, 3, 5, 6}    | ∅ ∪ ({2, 3, 5, 6} − ∅)               | {2, 3, 5, 6} |
+
+Entonces, finalmente queda así:  
+
+| Nodo n | IN[n]        | OUT[n]       |
+| ------ | ------------ | ------------ |
+| **1**  | —            | ∅            |
+| **2**  | ∅            | {2}          |
+| **3**  | {2}          | {2, 3}       |
+| **4**  | {2, 3, 5, 6} | {2, 3, 5, 6} |
+| **5**  | {2, 3, 5, 6} | {2, 5, 6}    |
+| **6**  | {2, 5, 6}    | {5, 6}       |
+| **7**  | {2, 3, 5, 6} | {2, 3, 5, 6} |
