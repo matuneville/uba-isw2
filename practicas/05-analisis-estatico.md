@@ -77,13 +77,13 @@ La suma queda definida como:
 # 2da Parte  
 
 - $\text{OUT}[n] = \text{GEN}[n] \cup (\text{IN}[n] - \text{KILL}[n])$
-- $\text{IN}[n] = \bigcup \text{OUT}[p] \quad \text{(para cada predecesor p de n)}$
-  
+- $\text{IN}[n] = \bigcup \text{OUT}[p] \quad \text{(para cada predecesor p de n)}$  
+Donde:  
 - $\text{GEN}[n]$: qué definición genera (crea) el nodo `n` — es la propia instrucción si define una variable.  
 - $\text{KILL}[n]$: qué definiciones previas de esa misma variable se anulan (matan) porque fueron sobrescritas por este nodo.  
 
 ---
-## Ejercicio 8
+## Ejercicio 8 y 9
 
 ```c
 1: entry
