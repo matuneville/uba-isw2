@@ -83,7 +83,7 @@ Donde:
 - $\text{KILL}[n]$: qué definiciones previas de esa misma variable se anulan (matan) porque fueron sobrescritas por este nodo.  
 
 ---
-## Ejercicio 8 y 9
+## Ejercicio 8 y 9 - Reaching Definitions
 
 ```c
 1: entry
