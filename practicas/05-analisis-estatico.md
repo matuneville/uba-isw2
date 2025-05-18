@@ -88,7 +88,15 @@ Donde:
 - $\text{IN}[n] = \text{USE}[n] \cup (\text{OUT}[n] - \text{DEF}[n])$  
 Donde:
 - $\text{USE}[i]$ son las variables que se usan en la instrucción $i$ antes de definirse ahí.
-- $\text{DEF}[i]$ son las variables que se definen o modifican en la instrucción $i$.
+- $\text{DEF}[i]$ son las variables que se definen o modifican en la instrucción $i$.  
+
+### Available Expresions Analysis
+- $\text{OUT}[n] = \text{GEN}[n] \cup (\text{IN}[n] - \text{KILL}[n])$
+- $\text{IN}[n] = \bigcap \text{OUT}[p] \quad \text{(para cada predecesor p de n)}$  
+Donde:
+- $\text{GEN}[n] = \text{\{expresion X op Y computada en n, sin redefinición posterior of X o Y in n \}}$: conjunto de expresiones que se calculan en la instrucción $n$ y cuyos operandos no se redefinen posteriormente en $n$. 
+- $\text{KILL}[n] = \text{\{expresiones X op Y del programa tal que X o Y estan definidas en n\}}$ =  conjunto de expresiones en el programa que incluyen variables que se definen en la instrucción $n$.  
+
 
 ---
 ## Ejercicio 8 y 9 - Reaching Definitions
@@ -210,3 +218,51 @@ F      T
 3. Si las constantes fueran variables, deberíamos tenerlas en cuenta para el análisis de variables vivas.
 
 ---
+## Ejercicio 11 - Live Expressions
+
+```c
+void foo(int[] m){
+
+1: int a = 3;
+2: int i = a + 2;
+
+3: while (i <= a){
+4:     int t = m[i] ∗ a;
+5:     m[i] = t;
+6:     int j = i + 1;
+7:     i = j;
+8:     a = bar(m,a)
+   }
+}
+```
+
+Expresiones relevantes para el análisis: $\text{\{ m[i], m[i] × a, a+2, i+1, bar(m,a)\}}$
+
+| Línea n   | GEN[n]           | KILL[n]                   | IN[n] = ⋂ OUT[preds(n)]        | OUT[n] = GEN[n] ∪ (IN[n] - KILL[n])              | OUT[n]                |
+| --------- | ---------------- | ------------------------- | ------------------------------ | ------------------------------------------------ | --------------------- |
+| 1         | ∅                | {m[i] × a, a+2, bar(m,a)} | ∅                              | ∅ ∪ (∅ - {m[i] × a, a+2, bar(m,a)})              | ∅                     |
+| 2         | {a+2}            | {i+1}                     | OUT[1] = ∅                     | {a+2} ∪ (∅ - {i+1})                              | {a+2}                 |
+| 3         | ∅                | ∅                         | OUT[2] ∩ OUT[8] = {a+2}        | ∅ ∪ ({a+2} - ∅)                                  | {a+2}                 |
+| 4         | {m[i], m[i] × a} | ∅                         | OUT[3] = {a+2}                 | {m[i], m[i] × a} ∪ ({a+2} - ∅)                   | {m[i], m[i] × a, a+2} |
+| 5         | ∅                | {m[i], m[i] × a}          | OUT[4] = {m[i], m[i] × a, a+2} | ∅ ∪ ({m[i], m[i] × a, a+2} - {m[i], m[i] × a})   | {a+2}                 |
+| 6         | {i+1}            | ∅                         | OUT[5] = {a+2}                 | {i+1} ∪ ({a+2} - ∅)                              | {a+2, i+1}            |
+| 7         | ∅                | {i+1}                     | OUT[6] = {a+2, i+1}            | ∅ ∪ ({a+2, i+1} - {i+1})                         | {a+2}                 |
+| 8         | {bar(m,a)}       | {m[i] × a, a+2, bar(m,a)} | OUT[7] = {a+2}                 | {bar(m,a)} ∪ ({a+2} - {m[i] × a, a+2, bar(m,a)}) | {bar(m,a)}            |
+| 3 (bucle) | ∅                | ∅                         | OUT[2] ∩ OUT[8] = {a+2}        | ∅ ∪ ({a+2} - ∅)                                  | {a+2}                 |
+
+---
+## Ejercicio 12
+
+1. **Dirección del análisis**:  
+    - **Forward**: la información fluye en la dirección del flujo de control (de entrada a salida).  
+    - **Backward**: la información fluye en sentido opuesto (de salida a entrada).  
+        
+2. **Naturaleza del análisis**:  
+    - **May**: analiza si **puede** existir información en algún camino (conservadora respecto a la posibilidad).  
+    - **Must**: analiza si **debe** existir en **todos** los caminos (conservadora respecto a la certeza).  
+        
+
+| |Forward|Backward|
+|---|---|---|
+|**May**|Reaching Definitions|Live Variables|
+|**Must**|Available Expressions|Very Busy Expressions|
