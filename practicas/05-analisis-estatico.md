@@ -264,5 +264,5 @@ Expresiones relevantes para el análisis: $\text{\{ m[i], m[i] × a, a+2, i+1, b
 
 | |Forward|Backward|
 |---|---|---|
-|**May**|Reaching Definitions|Live Variables|
+|**May**|Reaching Definitions, Sign Analysis|Live Variables|
 |**Must**|Available Expressions|Very Busy Expressions|
