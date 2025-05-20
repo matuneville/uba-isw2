@@ -266,3 +266,77 @@ Expresiones relevantes para el análisis: $\text{\{ m[i], m[i] × a, a+2, i+1, b
 |---|---|---|
 |**May**|Reaching Definitions, Sign Analysis|Live Variables|
 |**Must**|Available Expressions|Very Busy Expressions|
+
+---
+## Ejercicio 14
+
+```c
+1: x = 1 ;
+2: sensible(x) ;
+3: y = input ;
+4: if (y > 0)
+5:     z = x + 1 ;
+6: else
+7:     z = 0 ;
+8: insensible(x) ;
+```
+
+1. Defino el reticulado:
+
+```
+       S
+       |
+       I
+```
+
+Cuyo orden es $I ⊑ S$.  
+
+2. Abstracción del Dataflow:   
+	- Dominio: Funciones `Var → {S, I}`
+	- Unión (join): Para cada variable `v`, `S ⊔ I = S`, `S ⊔ S = S`, `I ⊔ I = I`
+	- Inicialización: Todas las variables se inician como `Insensible`.  
+- Función transfer:  
+	- `sensible(x)`: marca `x` como `S`
+	- `insensible(x)`: marca `x` como `I` (fuerza el valor)
+	- `y = f(x1, ..., xn)`: si alguna de `x1, ..., xn` es `S`, entonces `y` es `S`, sino `I`.  
+
+3. Resultado del análisis:
+
+| Nodo (linea) | OUT(x) | OUT(y) | OUT(z)    |
+| ------------ | ------ | ------ | --------- |
+| 1            | I      | I      | I         |
+| 2            | S      | I      | I         |
+| 3            | S      | S      | I         |
+| 4            | S      | S      | I         |
+| 5            | S      | S      | S         |
+| 7            | S      | S      | I         |
+| 8            | **I**  | S      | S (S ⊔ I) |
+
+---
+## Ejercicio 15
+
+```c
+1: y = 0;
+2: x = 0;
+3: z = 1;
+4: while (true) {
+5:     x = y + 1;
+6:     if (y == 0)
+7:         x = 0;
+8: }
+```
+
+2. El reticulado queda como:
+	- Elementos: pares de igualdad de la forma {(x,y), (x,z), (y,z)} 
+		- Top (⊤): todos iguales
+		- Bottom (⊥): sin igualdades (∅)
+		- Orden parcial: de la forma ∅ ⊑ {(x,y)} ⊑ {(x,y), (x,z)} ⊑ ⊤
+	- Función de transferencia:
+		- Asignación `x=y`: agrega (x,y) y (y,x)
+		- Asignación `x=z` cuando está (x,y): quita (x,y) y (y,x) y agrega (x,z) y (z,x) 
+		- if y while: no afecta a las igualdades directamente
+	- Ecuaciones de dataflow:  
+```
+OUT[n] = transfer(IN[n], instr[n])
+IN[n] = ⋂ OUT[p] for all predecesores p of n
+```
