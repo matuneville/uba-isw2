@@ -1,6 +1,6 @@
-package inge2.dataflow;
+package at.dataflow;
 
-import inge2.dataflow.zeroanalysis.DivisionByZeroAnalysis;
+import at.dataflow.zeroanalysis.DivisionByZeroAnalysis;
 import org.slf4j.Logger;
 import soot.*;
 import soot.tagkit.LineNumberTag;

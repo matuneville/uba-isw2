@@ -1,10 +1,12 @@
 package at.dataflow.zeroanalysis;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 /**
+ *
  * This class represents a mapping of ZeroAbstractValues (BOTTOM, -, 0, +,  or TOP) to variable names.
  */
 public class ZeroAbstractState {
@@ -62,10 +64,33 @@ public class ZeroAbstractState {
      * @return the union of this state with another state.
      */
     public ZeroAbstractState union(ZeroAbstractState another) {
-        ZeroAbstractState result = new ZeroAbstractState();
-        // TODO: IMPLEMENT
-        throw new UnsupportedOperationException("Operation is not implemented yet.");
+        ZeroAbstractState resultState = new ZeroAbstractState();
+
+        Set<String> allVariables = new HashSet<>();
+        allVariables.addAll(this.getDefinedVariables());
+        allVariables.addAll(another.getDefinedVariables());
+
+        // recorremos las variables de cada state
+        for (String variable : allVariables) {
+            boolean thisHasVariable = this.hasValue(variable);
+            boolean anotherHasVariable = another.hasValue(variable);
+
+            // si la variable esta en ambas, hacemos merge y seteamos en el resultado
+            if (thisHasVariable && anotherHasVariable) {
+                ZeroAbstractValue mergedValue = this.getValue(variable).merge(another.getValue(variable));
+                resultState.setValue(variable, mergedValue);
+            }
+            // si solamente esta en this o another la agregamos al estado resultante.
+            else if (thisHasVariable) {
+                resultState.setValue(variable, this.getValue(variable));
+            }
+            else {
+                resultState.setValue(variable, another.getValue(variable));
+            }
+        }
+        return resultState;
     }
+
 
     /**
      * Clears the State.

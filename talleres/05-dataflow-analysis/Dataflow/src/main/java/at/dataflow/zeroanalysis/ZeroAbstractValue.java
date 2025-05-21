@@ -52,16 +52,21 @@ public enum ZeroAbstractValue {
      */
     public ZeroAbstractValue add(ZeroAbstractValue another) {
 
+        // si alguno es bottom entonces toda la suma es bottom
         if (this.equals(BOTTOM) || another.equals(BOTTOM)) {return BOTTOM;}
 
+        // si alguno es top, la suma es top
         if (this.equals(TOP) || another.equals(TOP)) {return TOP;}
 
+        // el cero es neutro en la suma, se devuelve el valor del que no sea zero
         if (this.equals(ZERO)) {return another;}
         if (another.equals(ZERO)) {return this;}
 
+        // si soy negativo y le sumo un negativo, es negativo; si no, puede ser {-,0,+} = top
         if (this.equals(NEGATIVE) && another.equals(NEGATIVE)) {return NEGATIVE;}
         if (this.equals(NEGATIVE) && another.equals(POSITIVE)) {return TOP;}
 
+        // si soy positivo y le sumo un positivo, es positivo; si no, puede ser {-,0,+} = top
         if (this.equals(POSITIVE) && another.equals(NEGATIVE)) {return TOP;}
         if (this.equals(POSITIVE) && another.equals(POSITIVE)) {return POSITIVE;}
 
@@ -74,17 +79,23 @@ public enum ZeroAbstractValue {
      * @return the result of the division.
      */
     public ZeroAbstractValue divideBy(ZeroAbstractValue another) {
+        // si alguno de los dos es bottom, la division resultante es bottom
         if (this.equals(BOTTOM) || another.equals(BOTTOM)) {return BOTTOM;}
 
-        if (another.equals(TOP)) {return BOTTOM;}
-        if (this.equals(TOP)) {return TOP;}
-
+        // si se divide por 0 es bottom
         if (another.equals(ZERO)) {return BOTTOM;}
+        // cero dividido por algo resulta en el valor del otro
         if (this.equals(ZERO)) {return another;}
 
+        // if (another.equals(TOP)) {return BOTTOM;}
+        if (another.equals(TOP)) {return TOP;}
+        if (this.equals(TOP)) {return TOP;}
+
+        // si soy negativo y divido entre negativo, es positivo; si es positivo, da negativo
         if (this.equals(NEGATIVE) && another.equals(NEGATIVE)) {return POSITIVE;}
         if (this.equals(NEGATIVE) && another.equals(POSITIVE)) {return NEGATIVE;}
 
+        // si soy positivo y divido entre positivo, es positivo; si es negativo, da negativo
         if (this.equals(POSITIVE) && another.equals(NEGATIVE)) {return NEGATIVE;}
         if (this.equals(POSITIVE) && another.equals(POSITIVE)) {return POSITIVE;}
 
@@ -97,15 +108,20 @@ public enum ZeroAbstractValue {
      * @return the result of the multiplication.
      */
     public ZeroAbstractValue multiplyBy(ZeroAbstractValue another) {
+        // si cualquiera de los dos es bottom el resultado es bottom
         if (this.equals(BOTTOM) || another.equals(BOTTOM)) {return BOTTOM;}
 
-        if (another.equals(TOP) || this.equals(TOP)) {return TOP;}
-
+        // si alguno es cero la multiplicacion es zero
         if (this.equals(ZERO) || another.equals(ZERO)) {return ZERO;}
 
+        // si alguno es top entonces el resultado sera top ya que no es posible determinar el signo
+        if (another.equals(TOP) || this.equals(TOP)) {return TOP;}
+
+        // si soy negativo y multiplico por negativo, es positivo; si es positivo, da negativo
         if (this.equals(NEGATIVE) && another.equals(NEGATIVE)) {return POSITIVE;}
         if (this.equals(NEGATIVE) && another.equals(POSITIVE)) {return NEGATIVE;}
 
+        // si soy positivo y multiplico por positivo, es positivo; si es negativo, da negativo
         if (this.equals(POSITIVE) && another.equals(NEGATIVE)) {return NEGATIVE;}
         if (this.equals(POSITIVE) && another.equals(POSITIVE)) {return POSITIVE;}
 
@@ -125,9 +141,11 @@ public enum ZeroAbstractValue {
         if (this.equals(ZERO)) {return another;}
         if (another.equals(ZERO)) {return this;}
 
+        // si soy negatvio y le resto un negativo (queda como suma), puede ser {-,0,+} = top; si no, es negativo
         if (this.equals(NEGATIVE) && another.equals(NEGATIVE)) {return TOP;}
         if (this.equals(NEGATIVE) && another.equals(POSITIVE)) {return NEGATIVE;}
 
+        // si soy positivo y le resto un negativo (queda como suma), es positivo; si no, puede ser {-,0,+} = top
         if (this.equals(POSITIVE) && another.equals(NEGATIVE)) {return POSITIVE;}
         if (this.equals(POSITIVE) && another.equals(POSITIVE)) {return TOP;}
 
@@ -140,13 +158,18 @@ public enum ZeroAbstractValue {
      * @return the result of the merge.
      */
     public ZeroAbstractValue merge(ZeroAbstractValue another) {
-        if (this.equals(another)) {return this;}
 
+        // si alguno es top entonces la combinacion sera top ya que es el supremo
         if (this.equals(TOP)  || another.equals(TOP)) {return TOP;}
 
+        // si alguno es bottom entonces se devuelve el valor del otro ya que cualquier cosa es el supremo de bottom (incluido bottom)
+        if (this.equals(BOTTOM)) {return another;}
+        if (another.equals(BOTTOM)) {return this;}
 
-
-        throw new UnsupportedOperationException();
+        // casos {+, -, 0}
+        // si son iguales se devuelve a si mismo ya que uno es supremo de si mismo
+        if (another.equals(this)) {return this;}
+        // si no, es top ya que en este caso comparten el supremo.
+        else return TOP;
     }
-
 }
