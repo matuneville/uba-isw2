@@ -12,11 +12,10 @@ def single_point_crossover(parent1: Individual, parent2: Individual) -> Tuple[In
         Elegir un único punto en los padres y dividir/unir en 
         ese punto
     """
-     # Divido entre 1 o en len-1 ya que, si tomo 0 o len, los hijos podrían quedar igual a los padres
-    division_point = randint(1, len(parent1)-1)
+    division_point = randint(0, len(parent1.test_suite))
 
-    offspring1 = parent1[:division_point] + parent2[division_point:]
-    offspring2 = parent2[:division_point] + parent1[division_point:]
+    offspring1 = Individual(parent1.test_suite[:division_point] + parent2.test_suite[division_point:])
+    offspring2 = Individual(parent2.test_suite[:division_point] + parent1.test_suite[division_point:])
 
     return offspring1, offspring2
 
