@@ -87,7 +87,6 @@ public enum ZeroAbstractValue {
         // cero dividido por algo resulta en el valor del otro
         if (this.equals(ZERO)) {return another;}
 
-        // if (another.equals(TOP)) {return BOTTOM;}
         if (another.equals(TOP)) {return TOP;}
         if (this.equals(TOP)) {return TOP;}
 
