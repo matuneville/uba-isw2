@@ -10,10 +10,10 @@ class TestGeneticAlgorithm(unittest.TestCase):
         seed(2002)
         ga = GeneticAlgorithm()
         result = ga.run()
-        #print(f"""----- Test 1 -----
-        #      Generaciones: {ga.get_generation()},
-        #      Fitness mejor individuo: {ga.get_fitness_best_individual()},
-        #      Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
+        print(f"""----- Test 1 -----
+              Generaciones: {ga.get_generation()},
+              Fitness mejor individuo: {ga.get_fitness_best_individual()},
+              Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
         self.assertEqual(ga.get_generation(), 11)
         self.assertEqual(ga.get_fitness_best_individual(), 0.0)
         self.assertEqual(ga.get_branch_coverage_best_individual(), 0.0)
@@ -22,10 +22,10 @@ class TestGeneticAlgorithm(unittest.TestCase):
         seed(1310)
         ga = GeneticAlgorithm()
         result = ga.run()
-        #print(f"""----- Test 2 -----
-        #      Generaciones: {ga.get_generation()},
-        #      Fitness mejor individuo: {ga.get_fitness_best_individual()},
-        #      Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
+        print(f"""----- Test 2 -----
+              Generaciones: {ga.get_generation()},
+              Fitness mejor individuo: {ga.get_fitness_best_individual()},
+              Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
         self.assertEqual(ga.get_generation(), 3)
         self.assertEqual(ga.get_fitness_best_individual(), 0.0)
         self.assertEqual(ga.get_branch_coverage_best_individual(), 0.0)
@@ -34,10 +34,10 @@ class TestGeneticAlgorithm(unittest.TestCase):
         seed(1111)
         ga = GeneticAlgorithm()
         result = ga.run()
-        #print(f"""----- Test 3 -----
-        #      Generaciones: {ga.get_generation()},
-        #      Fitness mejor individuo: {ga.get_fitness_best_individual()},
-        #      Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
+        print(f"""----- Test 3 -----
+              Generaciones: {ga.get_generation()},
+              Fitness mejor individuo: {ga.get_fitness_best_individual()},
+              Branch cvg mejor individuo: {ga.get_branch_coverage_best_individual()}""")
         self.assertEqual(ga.get_generation(), 17)
         self.assertEqual(ga.get_fitness_best_individual(), 0.0)
         self.assertEqual(ga.get_branch_coverage_best_individual(), 0.0)

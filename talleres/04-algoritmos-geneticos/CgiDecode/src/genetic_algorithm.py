@@ -37,7 +37,7 @@ class GeneticAlgorithm:
                 total_reached_branches += 1
             if get_false_distance(condition_number):
                 total_reached_branches += 1
-        
+        print(f"Branches cubiertas: {total_reached_branches}")
         return total_reached_branches/10
 
 
