@@ -84,8 +84,9 @@ public enum ZeroAbstractValue {
 
         // si se divide por 0 es bottom
         if (another.equals(ZERO)) {return BOTTOM;}
-        // cero dividido por algo resulta en el valor del otro
-        if (this.equals(ZERO)) {return another;}
+        // cero dividido por algo resulta 0 salvo que el otro sea top o bottom
+        if (this.equals(ZERO) && !another.equals(NEGATIVE) && !another.equals(POSITIVE)) {return another;}
+        if (this.equals(ZERO) && (another.equals(POSITIVE) || another.equals(NEGATIVE))) {return ZERO;}
 
         if (another.equals(TOP)) {return TOP;}
         if (this.equals(TOP)) {return TOP;}
@@ -137,7 +138,9 @@ public enum ZeroAbstractValue {
 
         if (this.equals(TOP) || another.equals(TOP)) {return TOP;}
 
-        if (this.equals(ZERO)) {return another;}
+        // el otro ya no puede ser ni top ni bottom, quedan analizar casos zero - positive, zero - negative
+        if (this.equals(ZERO) && !another.equals(NEGATIVE)) {return another;}
+        if (this.equals(ZERO) && another.equals(NEGATIVE)) {return POSITIVE;}
         if (another.equals(ZERO)) {return this;}
 
         // si soy negatvio y le resto un negativo (queda como suma), puede ser {-,0,+} = top; si no, es negativo
