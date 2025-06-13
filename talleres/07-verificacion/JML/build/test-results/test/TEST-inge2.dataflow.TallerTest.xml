@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="inge2.dataflow.TallerTest" tests="5" skipped="0" failures="2" errors="0" timestamp="2025-06-13T18:05:59" hostname="neville-acer" time="17.566">
+  <properties/>
+  <testcase name="testAbsoluto()" classname="inge2.dataflow.TallerTest" time="5.195"/>
+  <testcase name="testBusquedaLineal()" classname="inge2.dataflow.TallerTest" time="5.003"/>
+  <testcase name="testSetup()" classname="inge2.dataflow.TallerTest" time="5.218"/>
+  <testcase name="testMapSumaUno()" classname="inge2.dataflow.TallerTest" time="1.074">
+    <failure message="org.opentest4j.AssertionFailedError: /home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:7: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:7: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:8: error: ';' expected&#10;    public static void mapSumaUno(int[] arr) {&#10;^&#10;3 errors&#10; ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: /home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:7: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:7: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/MapSumaUno.java:8: error: ';' expected
+    public static void mapSumaUno(int[] arr) {
+^
+3 errors
+ ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:40)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:218)
+	at inge2.dataflow.TallerTest.testMapSumaUno(TallerTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:750)
+</failure>
+  </testcase>
+  <testcase name="testStackAr()" classname="inge2.dataflow.TallerTest" time="1.076">
+    <failure message="org.opentest4j.AssertionFailedError: /home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:20: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:20: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:21: error: ';' expected&#10;    public StackAr() {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:25: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:25: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:26: error: ';' expected&#10;    public StackAr(int capacity) {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:31: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:31: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:32: error: ';' expected&#10;    public boolean isEmpty() {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:37: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:37: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:38: error: ';' expected&#10;    public boolean isFull() {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:43: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:43: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:44: error: ';' expected&#10;    public int size() {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:49: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:49: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:50: error: ';' expected&#10;    public void push(int o) {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:55: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:55: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:56: error: ';' expected&#10;    public int pop() {&#10;^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:61: error: &lt;identifier&gt; expected&#10;    //@ TODO: ESPECIFICAR&#10;            ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:61: error: Expected an identifier, found end of JML comment instead&#10;    //@ TODO: ESPECIFICAR&#10;                         ^&#10;/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:62: error: ';' expected&#10;    public int peek() {&#10;^&#10;24 errors&#10; ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: /home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:20: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:20: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:21: error: ';' expected
+    public StackAr() {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:25: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:25: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:26: error: ';' expected
+    public StackAr(int capacity) {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:31: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:31: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:32: error: ';' expected
+    public boolean isEmpty() {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:37: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:37: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:38: error: ';' expected
+    public boolean isFull() {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:43: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:43: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:44: error: ';' expected
+    public int size() {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:49: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:49: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:50: error: ';' expected
+    public void push(int o) {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:55: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:55: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:56: error: ';' expected
+    public int pop() {
+^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:61: error: &lt;identifier&gt; expected
+    //@ TODO: ESPECIFICAR
+            ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:61: error: Expected an identifier, found end of JML comment instead
+    //@ TODO: ESPECIFICAR
+                         ^
+/home/neville/GitHub/uba-isw2/talleres/07-verificacion/JML/src/main/java/inge2/dataflow/StackAr.java:62: error: ';' expected
+    public int peek() {
+^
+24 errors
+ ==&gt; expected: &lt;false&gt; but was: &lt;true&gt;
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertFalse.assertFalse(AssertFalse.java:40)
+	at org.junit.jupiter.api.Assertions.assertFalse(Assertions.java:218)
+	at inge2.dataflow.TallerTest.testStackAr(TallerTest.java:57)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:135)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
+	at java.lang.Thread.run(Thread.java:750)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
