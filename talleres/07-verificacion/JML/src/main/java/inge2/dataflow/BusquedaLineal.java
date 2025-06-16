@@ -11,7 +11,7 @@ public class BusquedaLineal {
 
         //@ loop_invariant 0 <= i && i <= arr.length;
         //@ loop_invariant result <==> (\exists int j; 0 <= j && j < i; arr[j] == elem);
-        //@ decreasing arr.length - i
+        //@ decreases arr.length - i;
         for (int i = 0; i < arr.length; i++) {
             if (elem == arr[i]) {
                 result = true;

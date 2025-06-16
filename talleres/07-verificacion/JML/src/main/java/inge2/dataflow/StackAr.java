@@ -10,58 +10,64 @@ public class StackAr {
     /**
      * Arreglo que contiene los elementos de la pila.
      */
+    //@ spec_public
     private final int[] elems;
 
     /**
      * Indice del tope de la pila.
      */
+    //@ spec_public
     private int top = -1;
 
-    //@ TODO: ESPECIFICAR
+    //@ requires true;
+    //@ ensures elems.length == 10 && top == -1;
     public StackAr() {
         this(DEFAULT_CAPACITY);
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires capacity > 0;
+    //@ ensures elems.length == capacity && top == -1;
     public StackAr(int capacity) {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.elems = new int[capacity];
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires true;
+    //@ ensures \result <==> top == -1;
+    //@ pure
     public boolean isEmpty() {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        return top == -1;
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires true;
+    //@ ensures \result <==> top == (elems.length - 1);
+    //@ pure
     public boolean isFull() {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        return top == elems.length - 1;
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires top < Integer.MAX_VALUE;
+    //@ ensures \result == (top + 1);
+    //@ pure
     public int size() {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        return top + 1;
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires !this.isFull() && top < elems.length && top >= 0;
+    //@ ensures elems[top] == o && (\forall int i; 0 <= i && i < top; elems[i] == \old(elems[i]));
     public void push(int o) {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.elems[++top] = o;
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires !this.isEmpty() && top < elems.length && top >= 0;
+    //@ ensures \result == elems[\old(top)] && (\forall int i; 0 <= i && i <= top; elems[i] == \old(elems[i]));
     public int pop() {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        return elems[top--];
     }
 
-    //@ TODO: ESPECIFICAR
+    //@ requires !this.isEmpty() && 0 <= top && top < elems.length && top >= 0;
+    //@ ensures \result == elems[top] && (\forall int i; 0 <= i && i <= top; elems[i] == \old(elems[i]));
     public int peek() {
-        // TODO: IMPLEMENTAR
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.elems[top];
     }
 }
 
